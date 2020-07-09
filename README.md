@@ -5,6 +5,31 @@ This one can be seen at: https://pugs.kabajiow.com
 
 This will have a few extra collaborators, and have custom stuff even more unique to pugs. 
 
+## Summary of changes made
+
+Some of the main changes I made include: 
+  * Integrated BootStrap CSS 
+    * This is because BootStrap is generally very responsive. 
+    * While it's not perfect here (on mobile devices), [it DID get rid of of the lack of uniform text.](https://imgur.com/a/UHgTkGc) 
+    * This is included via their public CDN - details [here](https://getbootstrap.com/docs/4.5/getting-started/introduction/#css)
+    * I did not include any of the JS - it's not needed, I only care about the CSS. 
+  * Why did I use BootStrap? 
+    * It's responsive, easy to modify, and adds some consistency to the text. 
+    * It also allowed me to convert the page to a 'dark' theme easily. 
+  * Added a [Navbar](https://getbootstrap.com/docs/4.5/components/navbar/) to the top
+  * Added some `<head>` tags for a new title, a profile, a favicon, etc. for embeds. 
+  * Formatted the positioning of the 'add player' line so it's more uniform
+  * Added a lot of div's to various regions with classes such as... 
+    * `<nav class="navbar navbar-expand-md navbar-dark bg-dark">`
+    * Notice the "bg-dark" above - this was used widely throughout (**bg-dark** is the darker background, **bg-secondary** is the lighter grey)
+    * I also added various classes to the input buttons to change their appearance, such as...
+    `<input value="Fill teams" class="big-btn text-light bg-secondary" type="button" onclick="fill_teams();" title=` 
+    * Notice the "**text-light** and **bg-secondary** - this darkens the button, and makes the text a light color which is nicer to read. 
+  * Moved all of the pre-existing JavaScript files (which essentially ensure this entire page runs smoothly) into a folder called scripts, and moved the stylesheet into a folder called 'css'
+
+Overall, this was already great - I just did some tidying up to make it look cleaner.
+Props to [adminimusRU](https://github.com/adminimusRU/OWcustomBalancer) as this was phenomenal as I dove further in. 
+
 # Overwatch custom game balancer
 Tool for balancing teams in Overwatch custom games.
 

@@ -3,6 +3,8 @@ Not much differs from the original, other than I have made it a bit nicer visual
 
 This one can be seen at: https://pugs.kabajiow.com
 
+This will have a few extra collaborators, and have custom stuff even more unique to pugs. 
+
 # Overwatch custom game balancer
 Tool for balancing teams in Overwatch custom games.
 

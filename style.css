@@ -1,10 +1,12 @@
 html {
 	height: 100%;
+	background-color: #1a1a1a;
 }
 
 body {
 	margin: 0.5em;
 	height: 95%;
+	background-color: #1a1a1a;
 }
 
 input[type="text"] {
@@ -12,9 +14,10 @@ input[type="text"] {
 }
 
 .page-title {
-	font-size: 26pt;
+	/* font-size: 26pt;
 	display: inline-block;
-	padding-bottom: 0.3em;
+	padding-bottom: 0.3em; */
+	padding-left: 1em;
 }
 
 .copyright {
@@ -32,8 +35,17 @@ button[id="add_btn"] {
 
 .team-title {
 	font-size: 20pt;
-	border: 1px solid white !important;
-	width: 100%;
+	/* border: 1px solid white !important; */
+	/* width: 100%; */
+}
+
+.lobby-title {
+	font-size: 20pt;
+	/* border: 1px solid white !important; */
+	/* width: 100%; */
+	/* padding-left: 1em; */
+	padding-right: 10em;
+	text-align: left;
 }
 
 input.team-title:hover {

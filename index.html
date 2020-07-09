@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-<title>OW Custom game balancer</title>
-<meta name="description" content="Overwatch custom game balancer">
-<link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Kabaji Pugs Team Balancer</title>
+	<meta name="description" content="Overwatch custom game balancer">
+	<meta content="https://pugs.kabajiow.com/img/favicon.png" property="twitter:image">
+	<link rel="icon" 
+	type="image/png" 
+	href="https://pugs.kabajiow.com/img/favicon.png">
+	<meta content="Kabaji Pugs Team Balancer" property="twitter:title">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+	<!-- 
 
-<script src="globals.js"></script>
+	This version is modified by UpsetDavid. 
+	This rendition was made on 7/8/2020, and had some Bootstrap CSS added to make it look nicer. 
 
-<script src="ow_defines.js"></script>
-<script src="common.js"></script>
-<script src="owapi.js"></script>
-<script src="stats_updater.js"></script>
-<script src="import_export.js"></script>
-<script src="ui.js"></script>
+	-->
+	<link rel="stylesheet" href="style.css">
 
-<script src="init.js" defer></script>
+	<script src="globals.js"></script>
+
+	<script src="ow_defines.js"></script>
+	<script src="common.js"></script>
+	<script src="owapi.js"></script>
+	<script src="stats_updater.js"></script>
+	<script src="import_export.js"></script>
+	<script src="ui.js"></script>
+
+	<script src="init.js" defer></script>
 
 </head>
 
 <body>
 
-<div class="page-title">Overwatch custom game balancer</div>
-<div class="copyright">2017-2019 by <a href="https://github.com/adminimusRU">l33t m3at</a> | Stats data by <a href="https://github.com/SunDwarf/OWAPI">OWAPI</a></div>
-<br/>
+<!-- <div class="page-title">Overwatch custom game balancer</div> -->
+<!-- <h1 class="text-light bg-dark page-title">Overwatch Custom Game Balancer</h1>
+<div class="copyright text-light">2017-2019 by <a href="https://github.com/adminimusRU">l33t m3at</a> | Stats data by <a href="https://github.com/SunDwarf/OWAPI">OWAPI</a></div> -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<img src="img/kabajiglare.png" width="50" height="50" class="d-inline-block align-top" loading="lazy" />
+	<span class="navbar-brand h1" href="#" style="padding-left: 1em">Kabaji Pugs Team Balancer</span>
+	<ul class="navbar-nav ml-auto">
+	  <span class="navbar-text">2017-2019 by </span><a class="nav-item nav-link text-white font-weight-bold" href="https://github.com/adminimusRU" target="_blank">l33t m3at</a>
+	  <span class="navbar-text">Stats data by <a class="text-white font-weight-bold" href="https://github.com/SunDwarf/OWAPI">OWAPI</a></span>
+	</ul>
+</nav>
 
-<br/>
-<span style="color: green; text-shadow: 0 0 3px green; font: bold 22pt sans-serif; vertical-align: sub;">+</span>
-<input id="new_player_id" name="new_player_id" type="text" size=35 placeholder="BattleTag" value="" onkeyup="new_player_keyup(event);"/> 
-<button onclick="add_player_click();" id="add_btn" >Add player</button>
-<br/>
-<br/>
+<div class="mx-2 py-2">
+	<span style="color: green; text-shadow: 0 0 3px green; font: bold 22pt sans-serif; vertical-align: sub;">+</span>
+	<input id="new_player_id" name="new_player_id" type="text" size=35 placeholder="BattleTag" value="" onkeyup="new_player_keyup(event);"/> 
+	<button onclick="add_player_click();" id="add_btn" >Add player</button>
+</div>
 
-<div class="table workspace">
+<div class="table workspace bg-secondary">
 	<div class="row">
 		<div class="cell workspace-cell">
 			<!-- lobby -->
@@ -57,7 +78,7 @@
 			</div>
 			
 			<div>
-			<span class="team-title">Lobby</span>
+			<span class="lobby-title text-dark bg-white">Lobby</span>
 			</div>
 			
 			<span id="lobby_count">0</span> players<br/>

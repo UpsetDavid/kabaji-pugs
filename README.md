@@ -1,3 +1,6 @@
+# This is a custom variant for use with Kabaji's pugs. 
+Not much differs from the original, other than I have made it a bit nicer visually and integrated Bootstrap CSS. 
+
 # Overwatch custom game balancer
 Tool for balancing teams in Overwatch custom games.
 

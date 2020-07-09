@@ -5,8 +5,6 @@ This one can be seen at: https://pugs.kabajiow.com
 
 This will have a few extra collaborators, and have custom stuff even more unique to pugs. 
 
-<<<<<<< HEAD
-=======
 ## Summary of changes made
 
 Some of the main changes I made include: 
@@ -32,7 +30,6 @@ Some of the main changes I made include:
 Overall, this was already great - I just did some tidying up to make it look cleaner.
 Props to [adminimusRU](https://github.com/adminimusRU/OWcustomBalancer) as this was phenomenal as I dove further in. 
 
->>>>>>> ac7c4d277bf5c8b6c216144de6b7dd77a1f8e44c
 # Overwatch custom game balancer
 Tool for balancing teams in Overwatch custom games.
 

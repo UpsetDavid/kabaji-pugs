@@ -1,6 +1,6 @@
 html {
 	height: 100%;
-	background-color: #1a1a1a;
+	background-color: blac;
 }
 
 body {
@@ -41,7 +41,7 @@ button[id="add_btn"] {
 
 .lobby-title {
 	font-size: 20pt;
-	/* border: 1px solid white !important; */
+	border: 1px solid white !important;
 	/* width: 100%; */
 	/* padding-left: 1em; */
 	padding-right: 10em;
@@ -81,7 +81,7 @@ input.team-title:hover {
 
 .team {
 	border: 1px solid black;
-	background-color: lightgray;
+	background-color: brown;
 	border-collapse: separate;
 	border-spacing: 5px 5px;
 	min-width: 20em;
@@ -104,7 +104,7 @@ input.team-title:hover {
 
 
 .player-item {
-	background-color: white;
+	background-color: whitesmoke;
 	cursor: grab;
 }
 
@@ -362,7 +362,7 @@ div[id="dlg_roll_progress"] {
 }
 
 .group {
-	border: 1px solid lightgray;
+	border: 1px solid darkgray;
 	min-width: 25em;
 	padding-bottom: 0.5em;
 }

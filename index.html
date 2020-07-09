@@ -54,7 +54,7 @@
 	<button onclick="add_player_click();" id="add_btn" >Add player</button>
 </div>
 
-<div class="table workspace bg-secondary">
+<div class="table workspace bg-dark">
 	<div class="row">
 		<div class="cell workspace-cell">
 			<!-- lobby -->
@@ -78,25 +78,27 @@
 			</div>
 			
 			<div>
-			<span class="lobby-title text-dark bg-white">Lobby</span>
+			<span class="h3 text-light">Lobby</span>
+			</div>
+			<div class="text-light">
+				<span id="lobby_count">0</span> players<br/>
 			</div>
 			
-			<span id="lobby_count">0</span> players<br/>
 			
 			<div style="display: flex; align-items: baseline">
-				<label for="lobby_filter">Filter: &nbsp;</label>
+				<label for="lobby_filter" class="text-light">Filter: &nbsp;</label>
 				<input id="lobby_filter" class="filter" type="text" size=35 autocomplete="off" placeholder="player name or battletag" value="" oninput="on_lobby_filter_change();"/> 
-				<span onclick="lobby_filter_clear();" style="cursor: default;" title="Clear filter" alt="Clear filter"> &#9003; </span>
+				<span onclick="lobby_filter_clear();" style="cursor: default;" title="Clear filter" alt="Clear filter" class="text-light"> &#9003; </span>
 			</div>
 			
 			<div class="lobby-container">
-				<div class="table team" id="lobby">
+				<div class="table team text-light" id="lobby">
 
 				</div>
 			</div>
 			
 			<br/>
-			<div title="Drop player here to delete" class="trashcan" id="trashcan" ondrop="player_drop(event)" ondragover="player_allowDrop(event)">				
+			<div title="Drop player here to delete" class="trashcan text-light" id="trashcan" ondrop="player_drop(event)" ondragover="player_allowDrop(event)">				
 				&#9760; Delete player (drop here)
 			</div>
 		</div>
@@ -121,30 +123,33 @@
 			<div>
 			<input id="team1_name" type="text" class="team-title" value="Team 1" autocomplete="off" onchange="save_team_name(this);">
 			</div>
+
+			<div class="text-light">
+				<span id="team1_sr">0</span> average SR<br/>
+			</div>
 			
-			<span id="team1_sr">0</span> average SR<br/>
 			
 			<div class="table team" id="team1" style="background-color: DodgerBlue;">
 				<!-- team 1 players -->
 			</div>
 			
 			<br/>
-			<div >
+			<div class="text-light">
 				<input class="big-checkbox" type="checkbox" id="role_lock_enabled" onchange="role_lock_changed();">
 				<label class="big-label" for="role_lock_enabled"> Enable role lock </label>
 				<br/>
 				<br/>
 				
-				<input class="big-btn" type="button" id="balance_btn" onclick="balance_teams();" value="&#9878; Balance teams" title="Automatically find most balanced compositions"/>
+				<input class="big-btn text-light bg-secondary" type="button" id="balance_btn" onclick="balance_teams();" value="&#9878; Balance teams" title="Automatically find most balanced compositions"/>
 				<br/>
 				<br/>
 				
-				<input class="big-btn" type="button" onclick="export_teams_dlg_open();" value="Export teams"/>
+				<input class="big-btn text-light bg-secondary" type="button" onclick="export_teams_dlg_open();" value="Export teams"/>
 				<br/>
 				<br/>
 				<br/>
 												
-				<input class="big-btn" type="button" id="settings_btn" onclick="settings_dlg_open();" value="&#9881; Settings" title="Open settings dialog"/>
+				<input class="big-btn text-light bg-secondary" type="button" id="settings_btn" onclick="settings_dlg_open();" value="&#9881; Settings" title="Open settings dialog"/>
 				<br/>
 				<br/>
 				<br/>
@@ -162,7 +167,7 @@
 		
 		<div class="cell" style="vertical-align: top; padding-top: 10em; min-width: 5em; text-align: center;">
 		<br/>
-		<span style="font-size: 30pt;"><b><i>VS</i></b></span>
+		<span style="font-size: 30pt;" class="text-light"><b><i>VS</i></b></span>
 		<br/>
 		<br/>
 		</div>
@@ -181,9 +186,11 @@
 			<div>
 			<input id="team2_name" type="text" class="team-title" value="Team 2" autocomplete="off" onchange="save_team_name(this);">
 			</div>
-		
-			<span id="team2_sr">0</span> average SR<br/>
-			
+
+			<div class="text-light">
+				<span id="team2_sr">0</span> average SR<br/>
+			</div>
+
 			<div class="table team" id="team2" style="background-color: tomato;">
 				<!-- team 2 players -->
 			</div>
@@ -194,12 +201,12 @@
 				
 			
 				<div style="display: flex">
-					<button class="medium-btn" id="update_active_stats_btn" onclick="update_active_stats();" value="" title="Update stats for active players">&#8635; Update <br/> active players</button>
+					<button class="medium-btn text-light bg-secondary" id="update_active_stats_btn" onclick="update_active_stats();" value="" title="Update stats for active players">&#8635; Update <br/> active players</button>
 				
-					<button id="update_all_stats_btn" class="medium-btn" onclick="update_all_stats();" value="" title="Update stats for all players" />&#8635; Update <br/> all players</button>
+					<button id="update_all_stats_btn" class="medium-btn text-light bg-secondary" onclick="update_all_stats();" value="" title="Update stats for all players" />&#8635; Update <br/> all players</button>
 				</div>
 				<br/>
-				<input id="update_stats_stop_btn" class="big-btn" type="button" onclick="stop_stats_update();" value="Stop" style="visibility:hidden;" />
+				<input id="update_stats_stop_btn" class="big-btn text-light bg-secondary" type="button" onclick="stop_stats_update();" value="Stop" style="visibility:hidden;" />
 				<div>
 					<div id="stats_update_processing" style="text-align: center;">
 						<progress id="stats_update_progress" value="0" max="100" style="width: 100%; visibility:hidden;">
@@ -225,18 +232,21 @@
 		
 		<div class="cell" style="width: 20em;">
 			<fieldset style="text-align: center;">
-				<legend>Check-in</legend>
+				<div class="text-light">
+					<legend>Check-in</legend>
+				</div>
 				
-				<div style="padding-bottom: 0.5em;">
+				
+				<div style="padding-bottom: 0.5em;" class="text-light">
 					<span id="checkin_counter">0</span> checked-in
 				</div>
-				<input class="medium-btn" type="button" onclick="manual_checkin_open();" value="Manual check-in"/>
+				<input class="medium-btn text-light bg-secondary" type="button" onclick="manual_checkin_open();" value="Manual check-in"/>
 				
-				<input class="medium-btn" type="button" onclick="reset_checkin();" value="Reset" title="Clear check-in mark for all players"/>
+				<input class="medium-btn text-light bg-secondary" type="button" onclick="reset_checkin();" value="Reset" title="Clear check-in mark for all players"/>
 			</fieldset>
 			<br/>
 			
-			<input value="Fill teams" class="big-btn" type="button" onclick="fill_teams();" title="Pick random checked-in players from lobby to fill all empty slots in teams"/>
+			<input value="Fill teams" class="big-btn text-light bg-secondary" type="button" onclick="fill_teams();" title="Pick random checked-in players from lobby to fill all empty slots in teams"/>
 			<br/>
 			<br/>
 				
